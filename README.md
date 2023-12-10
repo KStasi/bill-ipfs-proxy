@@ -1,1 +1,1 @@
-# pay-that-bill-ipfs-proxy-
+# pay-that-bill-ipfs-proxy
