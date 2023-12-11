@@ -9,7 +9,7 @@ dotenv.config();
 const pinata = new pinataSDK({ pinataJWTKey: process.env.PINATA_JWT_KEY });
 const app = express();
 
-app.use(express.json());
+app.use(express.text());
 app.use(cors());
 
 function stringToStream(str) {
@@ -31,7 +31,7 @@ function generateRandomString(length) {
 }
 
 app.post("/store", async (req, res) => {
-  const data = req.body.data;
+  const data = req.body;
 
   try {
     const stream = stringToStream(data);
